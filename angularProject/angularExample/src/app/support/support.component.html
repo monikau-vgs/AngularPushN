@@ -1,0 +1,14 @@
+<div   class="collapse navbar-collapse justify-content-md-left" id="navbarsExample10">
+    <ul >
+      <a  routerLink="/"></a>
+      <li *ngIf="!auth.isLoggedIn()" >
+        <a  routerLink="/login">Login</a>
+      </li>
+      <li *ngIf="!auth.isLoggedIn()">
+        <a  routerLink="/register">Register</a>
+      </li>
+    </ul>
+</div>
+
+
+<router-outlet></router-outlet>

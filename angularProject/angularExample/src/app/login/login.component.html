@@ -1,0 +1,60 @@
+<div class="container" >
+  <div class="row">
+    <div class="col-md-4  mt-5  mx-auto" style="border:1px solid black; padding:60px 60px;" >
+      <form name="form" (ngSubmit)="f.form.valid && onclck()" #f="ngForm" novalidate>
+          <div>
+            <h1><p class="text-center"><img  src="../assets/LOGO_1.png">Return</p></h1>
+          </div>
+
+          <div class="md-form">
+               <input type="email" placeholder="Email" id="form1" class="form-control" name="email" #email="ngModel" ng-required="true"
+               pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" [(ngModel)]="credentials.email" 
+               [ngClass]="{'is-invalid':f.submitted && email.invalid}" required />
+
+               <div *ngIf="f.submitted && email.invalid" class="invalid-feedback">
+                <div *ngIf="email.errors.required">Email Name is required</div>
+                <div *ngIf="email.errors.email">Email must be a valid email Address</div>
+              </div>
+              <div *ngIf="email.errors &&(email.touched || email.dirty)" class="aler alert-danger">
+                <div [hidden]="!email.errors?.pattern">
+                    Invalid pattern
+                </div>
+              </div>
+                <!--<label for="form1">Email</label>-->
+          </div>
+
+          <div class="md-form">
+              
+                <table class="tableWidth">
+                  <tr>
+                    <td>
+                      <input [type]="passwordType" placeholder="password" name="password" id="form2" class="form-control" [(ngModel)]="credentials.password"
+                      pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&].{8,}"
+                      #password="ngModel" [ngClass]="{'is-invalid':f.submitted && password.invalid}"  ng-required="true" required 
+                      />
+                      
+                      <div *ngIf="f.submitted && password.invalid"class="invalid-feedback">
+                       <div *ngIf="password.errors.required">Password Name is required</div>
+                       <!--<div *ngIf="password.errors.minlength">Password must be at least 6 characters</div>-->
+                       <div *ngIf="password.errors.pattern">Password not valid.(should contain one uppercase,one lowercase,one digit,one special symbol...)</div>
+                     </div>
+                    </td>
+                    <td > <i  class="fa fa-eye" (click)="togglePassword()"></i></td>
+                  </tr>
+                </table>
+               
+          </div>
+
+          <button type="submit" class="btn btn-lg btn-secondary btn-block ">
+          Login</button><br><br>
+
+          <div>
+            <a href="url"><u>Forgot your password?</u></a>
+          </div>
+      </form>
+
+    </div>
+  </div>
+</div>
+
+

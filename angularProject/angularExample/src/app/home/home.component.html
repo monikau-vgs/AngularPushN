@@ -1,0 +1,139 @@
+<nav class="navbar navbar-expand-lg    ">
+
+      <a navbar-brand href="#" class="brand_name" ><img src="../assets/logo_2.png">Return</a>
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse"
+          data-target="#mynav">
+      <span class="navbar-toggler-icon"></span>
+     </button>
+
+      <div class="collapse navbar-collapse " id="mynav">
+
+      <ul class="navbar-nav mr-auto nav_left_item ">
+         <li class="nav-item">
+
+          <a class="nav-link active" href="#" style="color:white;">SUPPORT</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link active" href="#" style="color:white;">NOTICIFICATION</a>
+        </li>
+      </ul>
+
+
+      <ul class="nav navbar-nav text-center">
+        <li>
+          <div class="searchbar " ><input class="search_input" type="text" name=""  placeholder="Search by Keywords..."  >
+          <i class="fa fa-search"></i> </div>
+        </li>
+      </ul>
+
+      <br>
+      <ul  class="navbar-nav ml-auto">
+        <li>
+        <table>
+         <tr>
+            <td colspan="2" style="text-align: center;">
+              <a  class="user_name" href="#">Hi Greg!</a>
+            </td>
+         </tr>
+
+         <tr>
+            <td>
+            <a class="nav-link nav_right_item" href="#" ><b>ACCOUNT </b></a>
+          </td>
+          <td>
+            <a class="nav-link nav_right_item" href="#" ><b>LOGOUT</b></a>
+          </td>
+          </tr>
+
+        </table>
+        </li>
+
+        <li>
+         <img src="../assets/contact.png" width="60" height="60" class="contact">
+        </li>
+
+
+      </ul>
+      </div>
+
+
+
+</nav>
+
+
+
+
+<div class="container" style="height:560px;max-width:100%;">
+  <br>
+
+    <div class="row">
+
+      <div class="col-sm-9">
+
+          <div class="col-sm-12" style="border:1px solid  #301934;height:550px;">
+            <div class="row">
+
+              <div class="col-sm-8" id="text"><b>My Engagements</b></div>
+            <div class="col-sm-4"><button type="button" class="btn btn-primary btn-lg" (click)="add_engagement()">
+                  Add New Engagement</button></div>
+            </div>
+
+            <div class="row top_links">
+              <div class="col-sm-2 "><a href="#">Active</a></div>
+              <div class="col-sm-2"><a href="#">Published</a></div>
+              <div class="col-sm-2"><a href="#">Distributed</a></div>
+              <div class="col-sm-2"><a href="#">closed</a></div>
+            </div>
+          </div>
+      </div>
+
+      <br>
+      <br>
+
+
+      <div class="col-sm-3"  >
+
+        <div class="row" >
+          <div class="col-sm-11" style="border:1px solid #301934; height:380px;">
+            <div class="row">
+              <b style="font-family:arial black;font-size:21px;">Content calender</b>
+            </div>
+            <div class="row">
+              <div class="col-sm-11" style="text-align:center;">
+              <ejs-calendar id=calendar [value]='value' [min]='minDate' [max]='maxDate'></ejs-calendar>
+              </div>
+            </div>
+          </div>
+        </div><br>
+
+        <div class="row" >
+          <div class="col-sm-11" style="border:1px solid #301934;height:145px;">
+            <table>
+              <th colspan="2">
+                <b style="font-family:arial black;font-size:21px;padding:15px;">Notifications</b>
+              </th>
+              <tr >
+                <td >
+                  <u><a  style="font-family:arial black;color:black;text-align:center;padding:15px;" href="#">Active</a></u>
+                </td>
+                <td style="color:black;padding:15px;" href="#">
+                  Closed
+                </td>
+              </tr>
+              <tr>
+                <td style="color:black;padding:15px;" href="#">Sent</td>
+                <td><u><a style="font-family:arial black;color:black;padding:15px;" href="#">Received</a></u></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+
+
+    </div>
+  </div>
+  <br><br>
+</div>
+
+
